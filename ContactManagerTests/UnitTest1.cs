@@ -32,7 +32,7 @@ namespace ContactManagerTests
             object output = ContactsManager.AddContact(new Contact("", "", ContactType.Work));
 
             // Assert 1
-            Assert.Equal("Name can't be empty.",output);
+            Assert.Equal("Name can't be empty.", output);
 
             // Act 2
             output = ContactsManager.AddContact(new Contact("", "00000", ContactType.Work));
@@ -54,7 +54,7 @@ namespace ContactManagerTests
         {
             // Act
             object addOutput = ContactsManager.RemoveContact(contact.Name);
-            
+
             // Assert
             Assert.Equal(ContactsManager.ViewAllContacts(), addOutput);
         }
